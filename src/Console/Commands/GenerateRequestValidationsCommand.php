@@ -11,7 +11,7 @@ class GenerateRequestValidationsCommand extends Command
     protected $signature = 'generate:request-validations';
     protected $description = 'Generate request validation files based on migration column data types, column lengths, uniqueness, and foreign keys';
     protected $skipTables = ['jobs', 'failed_jobs', 'migrations', 'password_resets', 'personal_access_tokens', 'sessions'];
-    protected $skipColumns = ['id', 'created_at', 'updated_at', 'deleted_at'];
+    protected $skipColumns = ['id', 'created_at', 'updated_at', 'deleted_at', 'email_verified_at'];
 
     public function handle()
     {
