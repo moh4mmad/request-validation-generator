@@ -1,0 +1,42 @@
+{
+  "name": "sakib/laravel-migration-validator",
+  "description": "A package to generate request validation files based on migration column data types",
+  "keywords": [
+    "validation",
+    "requests",
+    "database",
+    "migration",
+    "laravel"
+  ],
+  "authors": [
+    {
+      "name": "Sakib",
+      "email": "moh4mmadsakib@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": "^7.4",
+    "illuminate/support": "^8.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "YourVendor\\RequestValidationGenerator\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "YourVendor\\RequestValidationGenerator\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "phpunit"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
