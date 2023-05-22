@@ -1,6 +1,6 @@
 {
   "name": "sakib/laravel-migration-validator",
-  "description": "A package to generate request validation files based on migration column data types",
+  "description": "A package to generate request validation files based on migration column data types, column lengths, uniqueness, and foreign keys.",
   "keywords": [
     "validation",
     "requests",
