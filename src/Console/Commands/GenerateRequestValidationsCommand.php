@@ -126,7 +126,7 @@ class GenerateRequestValidationsCommand extends Command
         $content = "<?php\n\nnamespace App\Http\Requests\\{$className};\n\nuse Illuminate\Foundation\Http\FormRequest;\n\nclass Request extends FormRequest\n{\n    public function authorize()\n    {\n        return true;\n    }\n\n    public function rules()\n    {\n        return " . $this->formatValidationRules($rules) . ";\n    }\n}";
 
         $requestValidationsPath = app_path("Http/Requests/{$className}");
-        $requestValidationFile = "{$requestValidationsPath}/Request.php";
+        $requestValidationFile = "{$requestValidationsPath}/{$className}Request.php";
 
         // Create the request validation file
         File::ensureDirectoryExists($requestValidationsPath);
