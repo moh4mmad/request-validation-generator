@@ -7,7 +7,7 @@ Request Validation Generator is a Laravel package that automatically generates r
 You can install the package via Composer. Run the following command:
 
 ```bash
-composer require your-vendor/request-validation-generator
+composer require moh4mmad/request-validation-generator
 ```
 
 After installing the package, you need to publish the configuration file and migration files. Run the following command to publish the package assets:
