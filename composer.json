@@ -1,5 +1,5 @@
 {
-  "name": "moh4mmad/laravel-migration-validator",
+  "name": "moh4mmad/request-validation-generator",
   "description": "A package to generate request validation files based on migration column data types, column lengths, uniqueness, and foreign keys.",
   "keywords": [
     "validation",
@@ -19,24 +19,30 @@
   "license": "MIT",
   "require": {
     "php": "^7.4|^8.0",
-    "illuminate/support": "^8.0",
-	"moh4mmad/laravel-migration-validator": "dev-main"
+    "illuminate/support": "^8.0"
   },
   "require-dev": {
     "phpunit/phpunit": "^9.0"
   },
   "autoload": {
     "psr-4": {
-      "YourVendor\\RequestValidationGenerator\\": "src/"
+      "RequestValidationGenerator\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "YourVendor\\RequestValidationGenerator\\Tests\\": "tests/"
+      "RequestValidationGenerator\\Tests\\": "tests/"
     }
   },
-  "scripts": {
-    "test": "phpunit"
+  "extra": {
+    "laravel": {
+      "providers": [
+        "RequestValidationGenerator\\RequestValidationGeneratorServiceProvider"
+      ],
+      "commands": [
+        "RequestValidationGenerator\\Console\\Commands\\GenerateRequestValidationsCommand"
+      ]
+    }
   },
   "minimum-stability": "dev",
   "prefer-stable": true
