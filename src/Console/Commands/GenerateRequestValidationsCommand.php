@@ -123,7 +123,7 @@ class GenerateRequestValidationsCommand extends Command
         // Generate the request validation file
         $className = Str::studly(Str::singular($tableName));
 
-        $content = "<?php\n\nnamespace App\Http\Requests\\{$className};\n\nuse Illuminate\Foundation\Http\FormRequest;\n\nclass Request extends FormRequest\n{\n    public function authorize()\n    {\n        return true;\n    }\n\n    public function rules()\n    {\n        return " . $this->formatValidationRules($rules) . ";\n    }\n}";
+        $content = "<?php\n\nnamespace App\Http\Requests\\{$className}Request;\n\nuse Illuminate\Foundation\Http\FormRequest;\n\nclass Request extends FormRequest\n{\n    public function authorize()\n    {\n        return true;\n    }\n\n    public function rules()\n    {\n        return " . $this->formatValidationRules($rules) . ";\n    }\n}";
 
         $requestValidationsPath = app_path("Http/Requests/{$className}");
         $requestValidationFile = "{$requestValidationsPath}/{$className}Request.php";
