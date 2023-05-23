@@ -79,10 +79,3 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 ## License
 
 This package is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-
-```
-
-Make sure to replace `your-vendor/request-validation-generator` with the actual package name. This updated README.md file now includes the `php artisan vendor:publish --tag=request-validations` command to provide users with the necessary step to publish the package assets.
-
-Feel free to further customize the content as per your package's specific details. Let me know if there's anything else I can assist you with!
-```
